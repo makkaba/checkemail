@@ -1,0 +1,34 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col s6 offset-s3">
+            
+            <h1 class="center-align">보낸 메세지</h1>
+            
+                    
+            <% @content_all.each do |post| %>
+                <div class="card">
+                    <div class="card-content">
+                        <h4>받는이</h4>
+                        <div class="chip"><%= post.towhom %></div><br/>
+                        <h4>제목</h4>
+                        <%= post.title %><br>
+                        <h4>내용</h4>
+                        <%= post.content %><br>
+                        <h4>보낸날짜</h4>
+                        <%= post.created_at %><br>
+                    </div>
+                </div>        
+            <% end %>
+            <a class="waves-effect waves-light btn-large" href="/">홈으로</a>
+            
+            
+            
+                
+                
+        </div>
+        
+    </div>
+       
+    
+</div>

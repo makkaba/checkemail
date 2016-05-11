@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>내 240억..ㅠ</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  
+  <%if params[:action] == "confirm_email" %>
+   <%= javascript_include_tag "email_verify" %>
+  <% end%>
+  
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+</head>
+<body class="blue-grey lighten-5">
+
+<%= yield %>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+</body>
+</html>
