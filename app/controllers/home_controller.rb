@@ -40,7 +40,7 @@ class HomeController < ApplicationController
     @new_user.save 
     
     #메일 전송
-    mg_client = Mailgun::Client.new("key-bf85af4d95e0b6d5da926c9c812d64e4")
+    mg_client = Mailgun::Client.new("")
     message_params =  {
                       from: 'no-reply@lionlove.me',
                       to:   params[:user_email],
